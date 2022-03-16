@@ -5,11 +5,12 @@ public class Exercicio1 {
         int lOfArray = 32;
         Random rd = new Random();
         int[] arr = new int[lOfArray];
-        long start = System.currentTimeMillis();
+        
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rd.nextInt(); 
         }
-
+        
+        long start = System.currentTimeMillis();
         if (arr.length == 0){
             for (int i = 0; i < arr.length; ++i)
                 System.out.print(arr[i] + " ");
