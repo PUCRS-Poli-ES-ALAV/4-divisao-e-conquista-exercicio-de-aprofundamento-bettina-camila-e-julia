@@ -1,8 +1,15 @@
+import java.util.Random;
+
 public class Exercicio1 {
-    public static void main(String args[])
-    {
-        int arr[] = { 5, 3, 3, 8, 1, 9, 2 };
-        
+    public static void main(String args[]) {
+        int lOfArray = 32;
+        Random rd = new Random();
+        int[] arr = new int[lOfArray];
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rd.nextInt(); 
+        }
+
         if (arr.length == 0){
             for (int i = 0; i < arr.length; ++i)
                 System.out.print(arr[i] + " ");
@@ -10,15 +17,16 @@ public class Exercicio1 {
             Exercicio1 array = new Exercicio1();
             array.sort(arr, 0, arr.length - 1);
     
-            System.out.println("\n array merged");
             int n = arr.length;
             for (int i = 0; i < n; ++i)
                 System.out.print(arr[i] + " ");
         }
+        long end = System.currentTimeMillis();
+        long elapsedTime = end - start;
+        System.out.print("Time in milliseconds:"+ elapsedTime);
     }
 
-    void merge(int array[], int A, int middle, int B)
-    {
+    void merge(int array[], int A, int middle, int B) {
         int n1 = middle - A + 1;
         int n2 = B - middle;
   
@@ -58,8 +66,7 @@ public class Exercicio1 {
         }
     }
   
-    void sort(int array[], int left, int right)
-    {
+    void sort(int array[], int left, int right) {
         if (left < right) {
             int x =left+ (right-left)/2;
   
