@@ -14,6 +14,7 @@ public class Exercicio3 {
         long start = System.currentTimeMillis();
         
         System.out.print(array.maxVal2(arr, 0, arr.length-1));
+        
         long end = System.currentTimeMillis();
         long elapsedTime = end - start;
         System.out.print("Time in milliseconds:"+ elapsedTime);
